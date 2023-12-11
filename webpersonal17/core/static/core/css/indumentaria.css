@@ -1,0 +1,214 @@
+body{
+    background: #e9eae8;
+    /* background: radial-gradient(circle farthest-corner at center center, #199c2c 0%, #159859 80%);
+    background: -moz-radial-gradient(circle farthest-corner at center center, #048d79 0%, #15982d 80%); */
+
+    background: radial-gradient(circle farthest-corner at center center, #cfd0cf 0%, #dcdfdd 80%);
+    background: -moz-radial-gradient(circle farthest-corner at center center, #dbe0e0 0%, #dadedb 80%);
+    /* mbody {
+        background: #5ea326;
+        background: radial-gradient(circle farthest-corner at center center, #199c2c 0%, #159859 80%);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        flex-direction: column;
+    } */
+    
+  
+}
+nav {
+    background: #f8faf6;
+    /* background: radial-gradient(circle farthest-corner at center center, #199c2c 0%, #159859 80%); */
+    /* background: -webkit-radial-gradient(circle farthest-corner at center center, #1dd3b9 0%, #0d871798 80%); */
+    /* background: -moz-radial-gradient(circle farthest-corner at center center, #048d79 0%, #15982d 80%); */
+    background: radial-gradient(circle farthest-corner at center center, #cfd0cf 0%, #dcdfdd 80%);
+    background: -webkit-radial-gradient(circle farthest-corner at center center, #dde5e4 0%, #ecefec98 80%);
+    background: -moz-radial-gradient(circle farthest-corner at center center, #e6ebea 0%, #e5efe7 80%);
+    
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer {
+  color: white;
+  text-align: center;
+  padding: 1 em;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+footer ul {
+  list-style: none;
+  padding: 5px;
+}
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+footer a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+@media screen and(min-width: 52em) {
+    .centrado { 
+        margin: 0 auto;
+        padding: 0 .6em;
+    }
+    
+}
+h1 {
+  margin: 0  0 .1em;
+  padding: 1em 0;
+  font-weight: 400;
+}
+.tarjeta a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+.tarjeta a:hover{
+    text-shadow: 3px 3px 8px black;
+}
+h1{
+    color: white;
+}
+
+h3{
+    color: white;
+    padding: 1em 0;
+    margin: 0 0 .1em;
+    font-weight: 400;
+}
+p{
+    color: white;
+    text-align: center;
+}
+figure{ 
+    margin: 0;
+}
+
+.tarjeta {
+    margin: 10px 10px 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+.tarjeta img{
+    width: 100%;
+    height: 100%;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+figure{
+    margin: 0;
+}
+.tarjetas {
+    margin: 10px 10px 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.tarjetas img{
+    width: 100%;
+    height: 100%;
+    
+}
+.cartas{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+img:hover{
+   transform: scale(1.1);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  
+    body {
+      font-size: 14px; 
+    }
+  
+    .navbar-nav .nav-link {
+      padding: .5rem 1rem; 
+    }
+     
+      
+    .footer {
+     margin-top: 0.1em;
+      text-align: center;
+      padding: 1em ;
+      width: 100%;
+      position: relative;
+      clear: both;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+  }
+  
+  .footer ul li {
+      margin: 0 10px;
+  }
+  
+  .footer a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  }
+  
+  
+  
+
+  @media (max-width: 480px) {
+   
+    body {
+      font-size: 12px; 
+    }
+  
+    .navbar-toggler {
+      display: block; 
+    }
+  
+    .navbar-collapse {
+      display: none; 
+    }
+  
+    .navbar-toggler-icon {
+      background-color: #007bff; 
+    }
+  
+    .navbar-toggler:focus {
+      outline: none; 
+    }
+  
+    .navbar-collapse.show {
+      display: block; 
+    }
+  
+  }

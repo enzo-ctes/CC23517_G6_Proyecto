@@ -1,0 +1,175 @@
+{% extends "core/base.html" %}
+{% block title %}Indumentaria{% endblock %}
+{% block background %}{% load static %}{% static 'core/img/portadamandiyu.jpg' %}{% endblock %}
+{% block content %} 
+
+    <link rel="shortcut icon" href="{% static 'core/img/DeporMLOGO.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'core/css/indumentaria.css' %}">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="{% static 'core/img/DeporMLOGO.ico' %}" alt="Logo" width="73" height="70" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>  
+   
+    <h1>Indumentaria 2023</h1>
+    {% comment %} {{indumentarias}} con esto controlo que el objeto me esté devolviendo algo  {% endcomment %}
+    {% for indu in indumentarias%}
+    <div>
+        <section class="cards">
+            <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{{indu.image.url}}" alt="equipo">
+                </figure>
+                <div class="tarjeta-content">
+                </div>
+            </article> 
+             {% comment %}          
+           <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/equipo.png' %}" alt="equipo">
+                </figure>
+                <div class="tarjeta-content">
+                </div>
+            </article>
+            
+            <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/verde.png' %}" alt="camiseta suplente">
+                </figure>
+
+                <div class="tarjeta-content">
+
+                </div>
+            </article>
+            <article class="tarjeta">
+
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/2dasuplente.png' %}" alt="Tercer camiseta ">
+                </figure>
+
+                <div class="tarjeta-content">
+
+                </div>
+            </article>
+            <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/vestimentaverde.png' %}" alt="camiseta verde">
+                </figure>
+
+                <div class="tarjeta-content">
+                </div>
+            </article>
+            <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/chomba blanca.png' %}" alt="chomba blanca">
+                </figure>
+                <div class="tarjeta-content">
+                </div>
+            </article>
+            <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/remeentreno.png' %}" alt="remera de entrenamiento">
+                </figure>
+                <div class="tarjeta-content">
+                </div>
+            </article>
+            <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/deportivaverde.png' %}" alt="remera deportivaverde">
+                </figure>
+                <div class="tarjeta-content">
+                </div>
+            </article>
+            <article class="tarjeta">
+                <figure class="thumbnail">
+                    <img src="{% static 'core/img/deportiva.png' %}" alt="remera deportiva gris">
+                </figure>
+                <div class="tarjeta-content">
+                </div>
+            </article>
+            {% endcomment %}
+        </section> 
+        {% endfor %}
+    
+        <h3>Indumentarias Historicas</h3>
+        <div>
+            <section class="cartas">
+                <article class="tarjetas">
+                    <figure class="thumbnail">
+                        <img src="{% static 'core/img/1993.png' %}" alt="equipo Historica">
+                    </figure>
+                    <p>Mandiyu 1993</p>
+                    <div class="tarjeta-content">
+                    </div>
+                </article>
+                <div>
+                    <article class="tarjetas">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/1992.png' %}" alt="equipo con historia">
+                        </figure>
+                        <p>Mandiyu 1992</p>
+                        <div class="tarjeta-content">
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="tarjetas">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/1990.png' %}" alt="historia">
+                        </figure>
+                        <p>Mandiyu 1990</p>
+                        <div class="tarjeta-content">
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="tarjetas">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/verdolaga.png' %}" alt="verdolaga Historica">
+                        </figure>
+                        <p>Mandiyu 1986</p>
+                        <div class="tarjeta-content">
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="tarjetas">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/ultimahisotirca.png' %}" alt="blanca Historica">
+                        </figure>
+                        <p>Mandiyu 1985</p>
+                        <div class="tarjeta-content">
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="tarjetas">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/1976.png' %}" alt="blanca Historica">
+                        </figure>
+                        <p>Mandiyu 1976</p>
+                        <div class="tarjeta-content">
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+        </div>
+        <footer class="footer">
+            <nav id="redes">
+                <ul style="list-style: none; ">
+                    <li><a href="https://www.instagram.com/mandiyucorrientes/">Instagram</a></li>
+                    <li><a href="https://www.twitter.com/mandiyu1952/">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/cdmandiyucorrientes/">facebook</a></li>
+                    <li><a href="https://www.tiktok.com/@deportivomandiyu?_t=8c4Mt7bDw9d&_r=1">TikTok</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=IFKiyksHMAo&ab_channel=Sentatequetecuento">Youtube</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+{% endblock  %}
