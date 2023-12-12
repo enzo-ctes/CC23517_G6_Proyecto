@@ -18,6 +18,8 @@
     
     {% for indu in indumentarias%}
     <div>
+        {% if indu.historico == False %}
+        <!-- Contenido si la condición es falsa -->
         <p>{{indu.title}}</p>           
         <section class="cards">           
             <article class="tarjeta">
@@ -29,19 +31,31 @@
             </article> 
         </section> 
         <p>$ {{indu.price}}</p> 
+        {% endif %}
+    </div>
         {% endfor %}    
         <h3>Indumentarias Historicas</h3>
         <div>
-            <section class="cartas">
-                <article class="tarjetas">
-                    <figure class="thumbnail">
-                        <img src="{% static 'core/img/1993.png' %}" alt="equipo Historica">
-                    </figure>
-                    <p>Mandiyu 1993</p>
-                    <div class="tarjeta-content">
-                    </div>
-                </article>
-                <div>
+            {% for indu in indumentarias%}
+            <div>
+                {% if indu.historico == True %}
+                <!-- Contenido si la condición es falsa -->
+                <p>{{indu.title}}</p>           
+                <section class="cards">           
+                    <article class="tarjeta">
+                        <figure class="thumbnail">
+                            <img src="{{indu.image.url}}" alt="equipo">  
+                        </figure>
+                        <div class="tarjeta-content"> 
+                        </div>
+                    </article> 
+                </section> 
+                <p>$ {{indu.price}}</p> 
+                {% endif %}
+            </div>
+                {% endfor %}  
+        </div>
+                <!-- <div>
                     <article class="tarjetas">
                         <figure class="thumbnail">
                             <img src="{% static 'core/img/1992.png' %}" alt="equipo con historia">
@@ -90,7 +104,7 @@
                         <div class="tarjeta-content">
                         </div>
                     </article>
-                </div>
+                </div> -->
             </section>
             
         </div>

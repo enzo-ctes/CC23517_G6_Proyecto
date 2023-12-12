@@ -6,6 +6,7 @@ class Indumentaria(models.Model):
      description = models.TextField(verbose_name='descripción')
      image = models.ImageField(verbose_name='imagen', upload_to='project')
      price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='precio')
+     historico = models.BooleanField(default=False)
      created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
      updated = models.DateTimeField(auto_now=True, verbose_name='Fecha Modificación')
      
@@ -17,4 +18,5 @@ class Indumentaria(models.Model):
      class Meta:
          verbose_name = 'indumentaria'
          verbose_name_plural = 'indumentarias'
-         ordering = ['created'] # el menos en el created significa que ordenara de forma descendente si no tiene lo considera ascendente  
+         ordering = ['created'] # el menos en el created significa que ordenara de forma descendente si no tiene lo considera ascendente 
+
