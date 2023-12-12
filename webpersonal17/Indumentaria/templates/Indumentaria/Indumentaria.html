@@ -15,84 +15,21 @@
    
     <h1>Indumentaria 2023</h1>
     {% comment %} {{indumentarias}} con esto controlo que el objeto me esté devolviendo algo  {% endcomment %}
+    
     {% for indu in indumentarias%}
     <div>
-        <section class="cards">
+        <p>{{indu.title}}</p>           
+        <section class="cards">           
             <article class="tarjeta">
                 <figure class="thumbnail">
-                    <img src="{{indu.image.url}}" alt="equipo">
+                    <img src="{{indu.image.url}}" alt="equipo">  
                 </figure>
-                <div class="tarjeta-content">
+                <div class="tarjeta-content"> 
                 </div>
             </article> 
-             {% comment %}          
-           <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/equipo.png' %}" alt="equipo">
-                </figure>
-                <div class="tarjeta-content">
-                </div>
-            </article>
-            
-            <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/verde.png' %}" alt="camiseta suplente">
-                </figure>
-
-                <div class="tarjeta-content">
-
-                </div>
-            </article>
-            <article class="tarjeta">
-
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/2dasuplente.png' %}" alt="Tercer camiseta ">
-                </figure>
-
-                <div class="tarjeta-content">
-
-                </div>
-            </article>
-            <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/vestimentaverde.png' %}" alt="camiseta verde">
-                </figure>
-
-                <div class="tarjeta-content">
-                </div>
-            </article>
-            <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/chomba blanca.png' %}" alt="chomba blanca">
-                </figure>
-                <div class="tarjeta-content">
-                </div>
-            </article>
-            <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/remeentreno.png' %}" alt="remera de entrenamiento">
-                </figure>
-                <div class="tarjeta-content">
-                </div>
-            </article>
-            <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/deportivaverde.png' %}" alt="remera deportivaverde">
-                </figure>
-                <div class="tarjeta-content">
-                </div>
-            </article>
-            <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{% static 'core/img/deportiva.png' %}" alt="remera deportiva gris">
-                </figure>
-                <div class="tarjeta-content">
-                </div>
-            </article>
-            {% endcomment %}
         </section> 
-        {% endfor %}
-    
+        <p>$ {{indu.price}}</p> 
+        {% endfor %}    
         <h3>Indumentarias Historicas</h3>
         <div>
             <section class="cartas">
