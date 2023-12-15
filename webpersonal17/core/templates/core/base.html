@@ -9,27 +9,21 @@
     <title>{% block title %}{% endblock %} Ramirez Enzo Martín</title>
     {% block head %}{% endblock %}
     {% load static %}
-    <!-- Estilos y fuentes del template  -->
-   
+    <!-- Estilos y fuentes del template  -->  
     
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}"  rel="stylesheet">
     <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="{% static 'core/css/clean-blog.min.css' %}" rel="stylesheet">
-    
-    {% comment %} <link rel="shortcut icon" href="{% static 'core/img/DeporMLOGO.ico' %}" type="image/x-icon"> {% endcomment %}
- 
+    <link href="{% static 'core/css/clean-blog.min.css' %}" rel="stylesheet"> 
   </head>
-
   <body>
 
     <!-- Navegación -->
   
       <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-
-          <img id="logoindex" src="{% static 'core/img/DeporMLOGO.ico' %}" alt="Logo" width="73" height="70" class="d-inline-block align-text-top">
+          <img src="{% static 'core/img/DeporMLOGO.ico' %}" alt="Logo" width="73" height="70" >
           <a class="navbar-brand" href="{% url 'home' %}">Grupo Nº 6</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menú
@@ -47,11 +41,11 @@
               <a class="nav-link" href="{% url 'portfolio' %}">Historia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{% url 'indumentaria' %}">Indumentaria</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+            </li>           
           </ul>
         </div>
       </div>

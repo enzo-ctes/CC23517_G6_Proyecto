@@ -32,11 +32,11 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
 }
 
 .tarjeta {
-  margin-right: 10px;
+  margin-right: 30px;
+  
 }
 
 a {
@@ -116,7 +116,7 @@ figure{
 .tarjeta {
   margin: 10px 10px 10px;
   width: 200px;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
   border-radius: 5px;
   transition: all 0.3s ease;

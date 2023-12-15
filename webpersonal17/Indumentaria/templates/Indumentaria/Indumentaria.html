@@ -7,46 +7,34 @@
 {% block content %} 
     <link rel="shortcut icon" href="{% static 'core/img/DeporMLOGO.ico' %}" type="image/x-icon">
     <h1>Indumentaria 2023</h1>
-
-  {{indumentariasNuevas}}
-  {{indumentariasHistoricas}}
-    {% comment %} {{indumentarias}} con esto controlo que el objeto me esté devolviendo algo  {% endcomment %}
-    {% for indu in indumentarias %}
     <div>
-        {% if indu.historico == False %}
+    {% comment %} {{indumentarias}} con esto controlo que el objeto me esté devolviendo algo  {% endcomment %}
+    {% for indu in indumentariasNuevas %}   
         <!-- Contenido si la condición es falsa -->
-        <p>{{indu.title}}</p>  
-        <p>{{indu.description}}</p> 
-        <p>$ {{indu.price}}</p>         
+        <section class="cards">             
+            <article class="tarjeta" >
+                <p>{{indu.title}}</p>  
+                <p>$ {{indu.price}}</p>               
+                <figure class="thumbnail">
+                    <img src="{{indu.image.url}}" alt="equipo">  
+                </figure>                
+            </article>       
+        
+    {% endfor %}    
+        </section>
+    </div>
+        <div>
+        <h1>Indumentarias Historicas</h1>        
+            {% for indu in indumentariasHistoricas%}                                                       
             <section class="cards">             
                 <article class="tarjeta" >
+                    <p>{{indu.title}}</p>  
+                    <p>$ {{indu.price}}</p>               
                     <figure class="thumbnail">
                         <img src="{{indu.image.url}}" alt="equipo">  
-                    </figure>             
+                    </figure>                
                 </article>       
-        {% endif %}
-    </div>
-        {% endfor %}    
-    </section>     
-        <h1>Indumentarias Historicas</h1>
-        <div>
-            {% for indu in indumentarias%}
-            <div>
-                {% if indu.historico == True %}
-                <!-- Contenido si la condición es falsa -->
-                <p>{{indu.title}}</p>
-                <p>{{indu.description}}</p> 
-                <p>$ {{indu.price}}</p>                                
-                <section class="cards">           
-                    <article class="tarjeta">
-                        <figure class="thumbnail">
-                            <img src="{{indu.image.url}}" alt="equipo">  
-                        </figure>                        
-                    </article> 
-                </section>              
-            </div>
-                {% endif %}    
-        </div>         
+            
             {% endfor %}           
         </div>
 
