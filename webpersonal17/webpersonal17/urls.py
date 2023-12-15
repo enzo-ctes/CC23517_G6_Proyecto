@@ -28,6 +28,7 @@ urlpatterns = [
     path('about', about_views.about, name='about'),
     path('portfolio', portfolio_views.portfolio, name='portfolio'),
     path('indumentaria', indumentaria_views.indumentaria, name='indumentaria'),
+    path('indumentaria2', indumentaria_views.indumentariasNuevas, name='indumentaria2'),
     path('contact', views_core.contact, name='contact')    
 ]
 

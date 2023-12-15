@@ -1,10 +1,161 @@
 {% extends "core/base.html" %}
 {% block title %}Portada{% endblock %}
-{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+{% block head %} 
+<link rel="stylesheet" href="static/core/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/core/css/index.css">
+{% endblock head %}
+{% block background %}{% load static %}{% static 'core/img/portadamandiyu.jpg' %}{% endblock %}
 {% block headers %}
-<h1>Curso Full Stack Python</h1>
-<span class="subheading"> Comisión 23517</span>
+<h1><br> </h1>
+{% comment %} <span class="subheading"> Comisión 23517</span> {% endcomment %}
 {% endblock headers %}
-{% block content %}
+{% block content %}     
+      <div class="container-xxl text-left">
+        <div class="row">
+          <div class="col-3">  
+            <!-- Columna izquierda de body debajo de carousel -->
+            <h5 style="color: rgb(10, 47, 10); border-bottom:  double hsl(0,0%, 0%);">Noticias del Club</h5>             
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <b style="color: rgb(26, 26, 26);"> Nuevo Cuerpo técnico  </b>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    El 04/09/2023 se presentó el nuevo cuerpo técnico quien se va a poner al frente del equipo algodonero, encabezado por Daniel Cravero.
+                    {% comment %} <img id="imgCravero" src="{% static 'core/img/cravero.png' %}" alt=""> {% endcomment %}
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <button class="accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <b style="color: rgb(26, 26, 26);"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+                                <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"/>
+                                </svg> Campeones <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+                            <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"/>
+                          </svg></b>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    4 de junio, día en el que va a quedar en la historia del club y que va a ser recordada para siempre.
+                    Mandiyu se consagra Campeon de la liga profesional amateur. El mismo le da la posibilidad de jugar el Torneo Regional con intensiones de seguir ascendiendo y seguir haciendo historia
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <button class="accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <b style="color: rgb(26, 26, 26);">14-08-2023 </b>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    
+                    Hoy fue otro día histórico para Mandiyú porque recibimos la posesión de nuestro predio, además se realizó la mensura del terreno que comprende de seis hectáreas
+              Ahora se trabajará para que el lugar cuente con red eléctrica y la instalación de una bomba de agua lo que permitirá realizar las primeras obras en el predio   
+                  </div>
+                </div>
+              </div>                  
+            </div>         
+          </div>
+          
+          <!-- Columna del centro de body debajo de carousel -->
+          <div class="col">
+            <div class="centrado">
+              <section class="menu-section">              
+                  <nav class="menu-simple-menu">
+                      <ul>
+                          <li><a href="#">Actualidad</a></li>
+                          <li><a href="#">Mostrar todas las Noticias</a></li>
+                         
+                      </ul>
+                  </nav>
+              </section>
+          </div>
+          <img id="imgNoticias" src="{% static 'core/img/PrimeraFecha.png' %}" alt="">  
+          <p id="columMedio">
+            
+            Confirmado el día y horario para nuestro debut en el Torneo Regional
+            <br>
+
+          El domingo, desde las 16hs, arrancamos una nueva ilusión visitando a Defensores de San Roque.
+          </p>
+          <hr>         
+          <img id="imgNoticias" src="{% static 'core/img/amis11-10.jpg' %}" alt="">
+          <p id="columMedio">
+            Mandiyú sumó un nuevo amistoso de pretemporada y esta vez se trasladó hasta la ciudad de Formosa para enfrentarse ante Defensores de Formosa.
+            El triunfo fue para el Albo por 5-0. Los goles anotaron Hernán Valenzuela, Diego Nuñez, Andrés Almirón, Cristian Trevisan y Lautaro Mendoza            
+            FORMACIÓ              
+            Joaquín de los Reyes, Elías González, Rodrigo Valdovino, Hernán Coronel, Hernán Valenzuela; Andrés Almirón, Matías Gómez, Ricardo Maidana, Alejandro Ramírez; Mariano Giménez y Diego Núñez
+          </p>
+          <hr>
+          <img src="{% static 'core/img/urbina.jpg' %}" style="height:450px;width:70%;  margin-left:10%;" alt="">
+          <p id="columMedio">
+            El Club Deportivo Mandiyú lamenta informar el fallecimiento de Óscar Urbina, una gloria del Albo y el fútbol correntino
+            "Cepillo" supo vestir nuestros colores en el histórico ascenso a primera
+            Envíamos todas nuestras condolencias a sus familiares y seres queridos
+          </p>
+          </div>
+
+          <!-- Columna de la derecha de body debajo de carousel -->
+          <div class="col-3">
+            <h5 style="color: rgb(10, 47, 10); border-bottom:  double hsl(0,0%, 0%);">Partidos</h5>
+          <p>
+            
+            <div class="row">
+       
+              <div class="card" style="width: 18rem; text-align: center;   background: radial-gradient(circle farthest-corner at center center, #419d4e 0%, #159859 80%);">
+                <h5 class="card-title">Fecha 1</h5>
+                <h6 class="card-title">Def. de San Roque vs Mandiyu</h6>
+                <img id="imagenpartidos" src="{% static 'core/img/SanRoqueVsMand.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">                
+                  <p class="card-text" style="text-align: center;">Día: 29 de Octubre </p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; text-align: center; background: radial-gradient(circle farthest-corner at center center, #419d4e 0%, #159859 80%);">
+                <h5 class="card-title">Fecha 2</h5>
+                <h6 class="card-title">Mandiyu vs Camba Cuá</h6>
+                <img id="imagenpartidos" src="{% static 'core/img/ManVsCamba.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align: center;">Día: 5 de Noviembre</p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; text-align: center; background: radial-gradient(circle farthest-corner at center center, #419d4e 0%, #159859 80%);">
+                <h5 class="card-title">Fecha 3</h5>
+                <h6 class="card-title">Mandiyu vs Ferroviario</h6>
+                <img id="imagenpartidos" src="{% static 'core/img/MandVsFerro.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                 
+                  <p class="card-text" style="text-align: center;">Día: 12 Noviembre</p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+          </p>
+          </div>
+        </div>
+      </div>
+    <br><br><br><br><br><br>
+    <script src="static/core/js/bootstrap.bundle.min.js"></script>
 {% endblock  %}
 

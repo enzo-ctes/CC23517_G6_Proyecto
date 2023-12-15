@@ -15,8 +15,8 @@ class Indumentaria(models.Model):
           return self.title
      
      
-     class Meta:
-         verbose_name = 'indumentaria'
-         verbose_name_plural = 'indumentarias'
-         ordering = ['created'] # el menos en el created significa que ordenara de forma descendente si no tiene lo considera ascendente 
+class Meta:
+     verbose_name = 'indumentaria'
+     verbose_name_plural = 'indumentarias'
+     ordering = ['created'] # el menos en el created significa que ordenara de forma descendente si no tiene lo considera ascendente 
 

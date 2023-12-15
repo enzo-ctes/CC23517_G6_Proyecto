@@ -1,113 +1,55 @@
 {% extends "core/base.html" %}
 {% block title %}Indumentaria{% endblock %}
+{% block head %} 
+<link rel="stylesheet" href="static/Indumentaria/css/indumentaria.css">
+{% endblock head %}
 {% block background %}{% load static %}{% static 'core/img/portadamandiyu.jpg' %}{% endblock %}
 {% block content %} 
-
     <link rel="shortcut icon" href="{% static 'core/img/DeporMLOGO.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'core/css/indumentaria.css' %}">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <img src="{% static 'core/img/DeporMLOGO.ico' %}" alt="Logo" width="73" height="70" class="d-inline-block align-text-top">
-            </a>
-        </div>
-    </nav>  
-   
     <h1>Indumentaria 2023</h1>
+
+  {{indumentariasNuevas}}
+  {{indumentariasHistoricas}}
     {% comment %} {{indumentarias}} con esto controlo que el objeto me esté devolviendo algo  {% endcomment %}
-    
-    {% for indu in indumentarias%}
+    {% for indu in indumentarias %}
     <div>
         {% if indu.historico == False %}
         <!-- Contenido si la condición es falsa -->
-        <p>{{indu.title}}</p>           
-        <section class="cards">           
-            <article class="tarjeta">
-                <figure class="thumbnail">
-                    <img src="{{indu.image.url}}" alt="equipo">  
-                </figure>
-                <div class="tarjeta-content"> 
-                </div>
-            </article> 
-        </section> 
-        <p>$ {{indu.price}}</p> 
+        <p>{{indu.title}}</p>  
+        <p>{{indu.description}}</p> 
+        <p>$ {{indu.price}}</p>         
+            <section class="cards">             
+                <article class="tarjeta" >
+                    <figure class="thumbnail">
+                        <img src="{{indu.image.url}}" alt="equipo">  
+                    </figure>             
+                </article>       
         {% endif %}
     </div>
         {% endfor %}    
-        <h3>Indumentarias Historicas</h3>
+    </section>     
+        <h1>Indumentarias Historicas</h1>
         <div>
             {% for indu in indumentarias%}
             <div>
                 {% if indu.historico == True %}
                 <!-- Contenido si la condición es falsa -->
-                <p>{{indu.title}}</p>           
+                <p>{{indu.title}}</p>
+                <p>{{indu.description}}</p> 
+                <p>$ {{indu.price}}</p>                                
                 <section class="cards">           
                     <article class="tarjeta">
                         <figure class="thumbnail">
                             <img src="{{indu.image.url}}" alt="equipo">  
-                        </figure>
-                        <div class="tarjeta-content"> 
-                        </div>
+                        </figure>                        
                     </article> 
-                </section> 
-                <p>$ {{indu.price}}</p> 
-                {% endif %}
+                </section>              
             </div>
-                {% endfor %}  
+                {% endif %}    
+        </div>         
+            {% endfor %}           
         </div>
-                <!-- <div>
-                    <article class="tarjetas">
-                        <figure class="thumbnail">
-                            <img src="{% static 'core/img/1992.png' %}" alt="equipo con historia">
-                        </figure>
-                        <p>Mandiyu 1992</p>
-                        <div class="tarjeta-content">
-                        </div>
-                    </article>
-                </div>
-                <div>
-                    <article class="tarjetas">
-                        <figure class="thumbnail">
-                            <img src="{% static 'core/img/1990.png' %}" alt="historia">
-                        </figure>
-                        <p>Mandiyu 1990</p>
-                        <div class="tarjeta-content">
-                        </div>
-                    </article>
-                </div>
-                <div>
-                    <article class="tarjetas">
-                        <figure class="thumbnail">
-                            <img src="{% static 'core/img/verdolaga.png' %}" alt="verdolaga Historica">
-                        </figure>
-                        <p>Mandiyu 1986</p>
-                        <div class="tarjeta-content">
-                        </div>
-                    </article>
-                </div>
-                <div>
-                    <article class="tarjetas">
-                        <figure class="thumbnail">
-                            <img src="{% static 'core/img/ultimahisotirca.png' %}" alt="blanca Historica">
-                        </figure>
-                        <p>Mandiyu 1985</p>
-                        <div class="tarjeta-content">
-                        </div>
-                    </article>
-                </div>
-                <div>
-                    <article class="tarjetas">
-                        <figure class="thumbnail">
-                            <img src="{% static 'core/img/1976.png' %}" alt="blanca Historica">
-                        </figure>
-                        <p>Mandiyu 1976</p>
-                        <div class="tarjeta-content">
-                        </div>
-                    </article>
-                </div> -->
-            </section>
-            
-        </div>
+
         <footer class="footer">
             <nav id="redes">
                 <ul style="list-style: none; ">

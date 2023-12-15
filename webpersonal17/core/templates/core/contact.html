@@ -1,6 +1,7 @@
 {% extends "core/base.html" %}
 {% block title %}Contacto{% endblock %}
-{% block background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+{% block head %} <link rel="stylesheet" href="static/core/css/index.css"> {% endblock head %}
+{% block background %}{% load static %}{% static 'core/img/contacto.png' %}{% endblock %}
 {% block headers %}
 <h1>Contacto</h1>
 <span class="subheading">Consultoria</span>
@@ -10,15 +11,21 @@
 <div class="container">
 	<div class="row">
 	  <div class="col-lg-8 col-md-10 mx-auto">
-		<p>Para comunicarte con cualquiera de los integrantes lo podes hacer a través de los siguientes contactos</p>
+		<p>Para comunicarte con cualquiera de los integrantes del grupo lo podes hacer a través de los siguientes contactos</p>
 		<br>
-		<p><b>Teléfono:</b> +54 39 4720212</p>
-		<p><b>email:</b> enzoctess@gmail.com</p>
-		<p><b>email:</b> ojedavictoria89@gmail.com</p>
-		<p><b>email:</b> ceciliasenilliani@gmail.com</p>
-		<p><b>email:</b> santiagoavedano09@gmail.com</p>
+		{% comment %} Aquí se va a iterar el template de about que esta generado en otro directorio
+		para poder mostrar los correos de los integrantes que se encuentran en el template about {% endcomment %}
+		<p><b>Teléfono:</b> +54 379 47255555</p>
+		{% for integrante  in integrantes %}
+		<p><b>email: </b>{{integrante.email}}</p>
+		{% endfor %}		
 	  </div>
 	</div>
-  </div>
-{% comment %} <h2>Contacto</h2><p>email: enzoctess@gmail.com - 3794720212</p> {% endcomment %}
+	
+	<div class="col-lg-8 col-md-10 mx-auto">
+		<p><b>Sede social: </b> Catamarca 1056 </p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.9873586447793!2d-58.83591922614607!3d-27.469652916701232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456ca17378f7ef%3A0xbc7b529d3a5f4a5c!2sCatamarca%201050%2C%20W3400CEP%20Corrientes!5e0!3m2!1ses!2sar!4v1702522234839!5m2!1ses!2sar"
+		 width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+  </div> 
 {% endblock  %}
